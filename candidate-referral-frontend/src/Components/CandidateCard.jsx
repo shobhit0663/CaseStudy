@@ -1,5 +1,5 @@
 import React from 'react';
-import './CandidateCard.css';
+
 
 const CandidateCard = ({ candidate, onStatusChange }) => {
   return (

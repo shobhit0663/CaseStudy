@@ -1,7 +1,6 @@
-// 📁 CandidateForm.jsx (Professional version)
 import React, { useState } from 'react';
 import axios from 'axios';
-import './CandidateForm.css';
+
 
 const CandidateForm = ({ onSubmitSuccess }) => {
   const [form, setForm] = useState({
@@ -10,7 +9,10 @@ const CandidateForm = ({ onSubmitSuccess }) => {
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
-    setForm({ ...form, [name]: files ? files[0] : value });
+    setForm({
+      ...form,
+      [name]: files ? files[0] : value
+    });
   };
 
   const handleSubmit = async (e) => {
@@ -22,64 +24,21 @@ const CandidateForm = ({ onSubmitSuccess }) => {
       setForm({ name: '', email: '', phone: '', jobTitle: '', resume: null });
       onSubmitSuccess();
     } catch (err) {
-      console.error(err);
+      console.log(err);
     }
   };
 
   return (
-    <div className="candidate-form-container">
-      <div className="candidate-form-card">
-        <h4 className="form-title">Refer a Candidate</h4>
-        <form onSubmit={handleSubmit}>
-          <div className="form-grid">
-            <input
-              type="text"
-              name="name"
-              placeholder="Full Name"
-              className="form-input"
-              value={form.name}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email Address"
-              className="form-input"
-              value={form.email}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Phone Number"
-              className="form-input"
-              value={form.phone}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="text"
-              name="jobTitle"
-              placeholder="Job Title"
-              className="form-input"
-              value={form.jobTitle}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="file"
-              name="resume"
-              className="form-input-file"
-              onChange={handleChange}
-              accept="application/pdf"
-              required
-            />
-          </div>
-          <button type="submit" className="submit-btn">Submit Referral</button>
-        </form>
-      </div>
+    <div className="form-card">
+      <h5 className="text-center mb-3">🎯 Refer a Candidate</h5>
+      <form onSubmit={handleSubmit}>
+        <input type="text" name="name" placeholder="Full Name" value={form.name} onChange={handleChange} required />
+        <input type="email" name="email" placeholder="Email Address" value={form.email} onChange={handleChange} required />
+        <input type="tel" name="phone" placeholder="Phone Number" value={form.phone} onChange={handleChange} required />
+        <input type="text" name="jobTitle" placeholder="Job Title" value={form.jobTitle} onChange={handleChange} required />
+        <input type="file" name="resume" accept="application/pdf" onChange={handleChange} required />
+        <button type="submit">Submit Referral</button>
+      </form>
     </div>
   );
 };

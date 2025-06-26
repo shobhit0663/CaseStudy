@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "123e4567-e89b-12d3-a456-426614174000",
+    "name": "Rohit Sharma",
+    "email": "rohit@example.com",
+    "phone": "9876543210",
+    "jobTitle": "Frontend Developer",
+    "resumeUrl": "/uploads/resume-rohit.pdf",
+    "status": "Pending"
+  },
+  {
+    "_id": "223e4567-e89b-12d3-a456-426614174001",
+    "name": "Sneha Patil",
+    "email": "sneha@example.com",
+    "phone": "9988776655",
+    "jobTitle": "Backend Developer",
+    "resumeUrl": "/uploads/resume-sneha.pdf",
+    "status": "Reviewed"
+  }
+]
