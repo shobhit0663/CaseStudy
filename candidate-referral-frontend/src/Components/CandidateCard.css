@@ -1,0 +1,84 @@
+.candidate-card {
+  background-color: #ffffff;
+  padding: 20px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.candidate-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.candidate-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #212529;
+}
+
+.status-pill {
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: white;
+  text-transform: capitalize;
+}
+
+.status-pill.pending {
+  background-color: #ffc107;
+}
+
+.status-pill.reviewed {
+  background-color: #0d6efd;
+}
+
+.status-pill.hired {
+  background-color: #28a745;
+}
+
+.job-title {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #495057;
+}
+
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.status-select {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  flex-grow: 1;
+  max-width: 200px;
+}
+
+.resume-btn {
+  text-decoration: none;
+  background-color: #f1f1f1;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #212529;
+  transition: all 0.2s ease;
+}
+
+.resume-btn:hover {
+  background-color: #e2e6ea;
+  text-decoration: underline;
+}
